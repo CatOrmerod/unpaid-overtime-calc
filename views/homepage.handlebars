@@ -25,15 +25,15 @@
 
                     <h1 class="text-white mb-5">You have the right to switch off.</h1>
 
-                    <form>
+                    <form class= "entry-form" id="entry-form">
                         <div class="row">
                             <div class="col">
                                 <label class="text-white mb-2">Email address <span>*</span>&nbsp;</label>
-                                <input type="text" class="form-control mb-3" placeholder="your@email.com" name="email_address" id="email" required />
+                                <input type="text" class="form-control mb-3 email-entry" placeholder="your@email.com" name="email_address" id="email-entry" required />
                             </div>
                         </div>
 
-                        <div class="row mb-4">
+                        <div class="row mb-4 industry-entry" id="industry-entry">
                             <div class="col">
                                 <label class="text-white mb-2">Industry <span>*</span>&nbsp;</label>
                                 <select class="form-select">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-4">
+                        <div class="row mb-4 start-entry" id="start-entry">
                             <div class="col">
                                 <label class="text-white mb-2">Start time <span>*</span>&nbsp;</label>
                                 <select class="form-select">
@@ -125,7 +125,7 @@
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col end-entry" id="end-entry">
                                 <label class="text-white mb-2">Finish time <span>*</span>&nbsp;</label>
                                 <select class="form-select">
                                     <option selected>9:00am</option>
