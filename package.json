@@ -1,7 +1,7 @@
 {
   "name": "unpaid-overtime-calc",
   "version": "1.0.0",
-  "description": "",
+  "description": "a calculator that works out what a years worth of unpaid time ends up costing",
   "main": "server.js",
   "dependencies": {
     "connect-session-sequelize": "^7.1.1",
