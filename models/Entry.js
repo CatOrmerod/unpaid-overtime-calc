@@ -27,14 +27,10 @@ Entry.init(
             type: DataTypes.DECIMAL(4,2), 
             allowNull:false
         },
-        created_at: { 
-            type: DataTypes.DATEONLY, 
+        had_lunch: {
+            type: DataTypes.BOOLEAN,
             allowNull: false, 
-            defaultValue: sequelize.fn('NOW') 
-        },
-        created_at2: { 
-            type: Sequelize.DATE, 
-            defaultValue: Sequelize.NOW
+            defaultValue: false   
         },
         name: { 
             type: DataTypes.STRING, 
@@ -47,7 +43,16 @@ Entry.init(
             validate: { 
                 isEmail: true
             }
-        }
+        },
+        created_at: { 
+            type: DataTypes.DATEONLY, 
+            allowNull: false, 
+            defaultValue: sequelize.fn('NOW') 
+        },
+        created_at2: { 
+            type: Sequelize.DATE, 
+            defaultValue: Sequelize.NOW
+        },
     }, 
     { 
         sequelize, 
