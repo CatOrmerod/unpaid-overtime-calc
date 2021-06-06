@@ -20,8 +20,12 @@ Entry.init(
             allowNull: false
         },
         start_time: { 
-            type: DataTypes.TIME, 
+            type: DataTypes.DECIMAL, 
             allowNull: false, 
+        },
+        finish_time: {
+            type: DataTypes.DECIMAL, 
+            allowNull:false
         },
         created_at: { 
             type: DataTypes.DATEONLY, 
