@@ -16,7 +16,7 @@ Admin.init (
             allowNull: false, 
         }, 
         email: { 
-            type: FataTypes.STRING, 
+            type: DataTypes.EMAIL, 
             allowNull: false, 
             unique: true, 
             validate: { 
@@ -26,7 +26,31 @@ Admin.init (
         password: { 
             type: DataTypes. STRING, 
             allowNull: false, 
-
+            field: 'password',
+            validate: { 
+                len: [6,10],
+                isUppercase: true, 
+                isLowerCase: true, 
+                isInt: true,
+                // validate: {
+                //     checkPassword(value) {
+                //       if (
+                //         !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/.test(
+                //           value
+                //         )
+                //       ) {
+                //         throw new CustomError(400, 'Provide a valid password!');
+                //       }
+                //     },
+          
+                //     is: {
+                //       args: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/,
+                //       msg:
+                //         'The password must contain atleast 8 characters including at least 1 uppercase, 1 lowercase and one digit.'
+                //     }
+                //   }
+                // }
+            },
         }
         
     },
@@ -39,3 +63,5 @@ Admin.init (
     }
     
 );
+
+module.exports = Admin;
