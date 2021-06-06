@@ -28,7 +28,7 @@ Admin.init (
             allowNull: false, 
             field: 'password',
             validate: { 
-                len: [6,10],
+                len: [8],
                 isUppercase: true, 
                 isLowerCase: true, 
                 isInt: true,
@@ -46,7 +46,7 @@ Admin.init (
                 //     is: {
                 //       args: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/,
                 //       msg:
-                //         'The password must contain atleast 8 characters including at least 1 uppercase, 1 lowercase and one digit.'
+                //         'The password must contain 8 characters including at least 1 uppercase, 1 lowercase and one digit.'
                 //     }
                 //   }
                 // }
