@@ -20,11 +20,11 @@ Entry.init(
             allowNull: false
         },
         start_time: { 
-            type: DataTypes.DECIMAL, 
+            type: DataTypes.DECIMAL(4,2), 
             allowNull: false, 
         },
         finish_time: {
-            type: DataTypes.DECIMAL, 
+            type: DataTypes.DECIMAL(4,2), 
             allowNull:false
         },
         created_at: { 
