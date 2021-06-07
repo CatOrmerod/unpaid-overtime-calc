@@ -5,10 +5,7 @@ const { Admin, Entry } = require('../../models');
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await Admin.findOne({
-    where: { email },
-    include: [],
-  });
+  const user = await Admin.findOne({ where: { email } });
 
   if (!user) {
     return res.status(400).json({ msg: 'User does not exist' });
@@ -42,16 +39,13 @@ router.post('/entry', withAuth, async (req, res) => {
     created_at,
   } = req.body;
 
-  console.log('DATA', {
-    industry,
-    salary,
-    start_time,
-    end_time,
-    had_lunch,
-    name,
-    email,
-    created_at,
-  });
+  const entry = await Entry.findOne({ where: { email }});
+
+  if (entry) {
+    return res.status(400).json({
+      msg: 'Email already exists'
+    })
+  }
 
   await Entry.create({
     industry,
