@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Admin, Entry } = require('../../models');
 
 // Get all users - Just for testing - REMOVE THIS LATER
 router.get('/get-all-users', async (req, res) => {

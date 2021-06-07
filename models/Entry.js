@@ -32,10 +32,6 @@ Entry.init(
             allowNull: false, 
             defaultValue: false   
         },
-        name: { 
-            type: DataTypes.STRING, 
-            allowNull: false, 
-        },
         email: { 
             type: DataTypes.STRING, 
             allowNull:false, 
