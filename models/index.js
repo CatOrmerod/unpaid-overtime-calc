@@ -13,3 +13,4 @@ Admin.hasMany(Entry, {
 });
 
   module.exports = { Admin, Entry };
+1
