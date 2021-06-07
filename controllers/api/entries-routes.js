@@ -1,20 +1,18 @@
 const router = require('express').Router();
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 const { Admin, Entry } = require('../../models');
 
 // Create new entries
-router.post('/entry', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   const {
     industry,
     salary,
-    start_time,
-    end_time,
-    had_lunch,
-    name,
-    email,
-    created_at,
+    start,
+    end,
+    lunch,
+    email
   } = req.body;
-
+console.log(req.body);
   const entry = await Entry.findOne({ where: { email } });
 
   if (entry) {
@@ -26,12 +24,10 @@ router.post('/entry', withAuth, async (req, res) => {
   await Entry.create({
     industry,
     salary,
-    start_time,
-    end_time,
-    had_lunch,
-    name,
-    email,
-    created_at,
+    start_time: start,
+    end_time: end,
+    had_lunch: lunch === "yeslunch",
+    email
   });
 
   res.json({
@@ -40,21 +36,21 @@ router.post('/entry', withAuth, async (req, res) => {
 });
 
 // Get total
-router.get('/get-entries-total', async (req, res) => {
-  const entries = await Entry.findAll();
+// router.get('/get-entries-total', async (req, res) => {
+//   const entries = await Entry.findAll();
 
-  const total = entries.reduce((total, { start_time, end_time, salary }) => {
-      if (start_time > end_time) {
-          start_time = start_time - 24;
-      }
+//   const total = entries.reduce((total, { start_time, end_time, salary }) => {
+//       if (start_time > end_time) {
+//           start_time = start_time - 24;
+//       }
 
-      const workedHours = end_time - start_time;
-      if (0 > workedHours) console.log('THERE IS AN ERROR', end_time, start_time)
+//       const workedHours = end_time - start_time;
+//       if (0 > workedHours) console.log('THERE IS AN ERROR', end_time, start_time)
 
-      return total + salary * workedHours;
-  }, 0);
+//       return total + salary * workedHours;
+//   }, 0);
 
-  res.json({ total });
-});
+//   res.json({ total });
+// });
 
 module.exports = router;

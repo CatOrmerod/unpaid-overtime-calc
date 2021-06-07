@@ -7,11 +7,11 @@
         </div>
     </div>
 
-    <div class="row mb-4 industry-entry" id="industry-entry">
+    <div class="row mb-4 industry-entry">
         <div class="col">
             <label class="text-white mb-2">Industry <span>*</span>&nbsp;</label>
-            <select class="form-select">
-                <option selected>Administration & professional services</option>
+            <select id="industry-entry" class="form-select">
+                <option value="Administration & professional services">Administration & professional services</option>
                 <option value="Agriculture, forestry & fishing">Agriculture, forestry &amp;
                     fishing</option>
                 <option value="Community & disability services">Community & disability services
@@ -43,18 +43,18 @@
         </div>
     </div>
 
-    <div class="row mb-4 start-entry" id="start-entry">
+    <div class="row mb-4 start-entry">
         <div class="col">
             <label class="text-white mb-2">Start time <span>*</span>&nbsp;</label>
-            <select class="form-select">
-                <option selected>9:00am</option>
+            <select id="start-entry" class="form-select">
+               
                 <option value="6">6:00am</option>
                 <option value="6.5">6:30am</option>
                 <option value="7">7:00am</option>
                 <option value="7.5">7:30am</option>
                 <option value="8">8:00am</option>
                 <option value="8.5">8:30am</option>
-                <option value="9">9:00am</option>
+                <option selected value="9">9:00am</option>
                 <option value="9.5">9:30am</option>
                 <option value="10">10:00am</option>
                 <option value="10.5">10:30am</option>
@@ -99,10 +99,10 @@
             </select>
         </div>
 
-        <div class="col end-entry" id="end-entry">
+        <div class="col end-entry" >
             <label class="text-white mb-2">Finish time <span>*</span>&nbsp;</label>
-            <select class="form-select">
-                <option selected>9:00am</option>
+            <select id="end-entry" class="form-select">
+               
                 <option value="6">6:00am</option>
                 <option value="6.5">6:30am</option>
                 <option value="7">7:00am</option>
@@ -125,7 +125,7 @@
                 <option value="15.5">3:30pm</option>
                 <option value="16">4:00pm</option>
                 <option value="16.5">4:30pm</option>
-                <option value="17">5:00pm</option>
+                <option selected value="17">5:00pm</option>
                 <option value="17.5">5:30pm</option>
                 <option value="18">6:00pm</option>
                 <option value="18.5">6:30pm</option>
@@ -160,13 +160,13 @@
 
     <label class="text-white mb-2">Do you take lunch? <span>*</span>&nbsp;</label>
     <br>
-    <div class="form-check form-check-inline">
-        <input v-model="yeslunch" class="form-check-input" type="radio" name="inlineRadioOptions" checked="checked"
+    <div class="form-check form-check-inline" id="lunch-entry">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" checked="checked"
             id="inlineRadio1" value="yeslunch">
         <label class="text-white form-check-label" for="inlineRadio1">Yes</label>
     </div>
     <div class="form-check form-check-inline">
-        <input v-model="nolunch" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
             value="nolunch">
         <label class="text-white form-check-label" for="inlineRadio2">No</label>
     </div>
@@ -179,3 +179,5 @@
     <div class="mt-3" id="result"></div>
     <div id="success"></div>
 </form>
+
+<script src="/js/entry.js"></script>

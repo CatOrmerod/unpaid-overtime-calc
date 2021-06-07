@@ -13,15 +13,12 @@ module.exports = {
             var newDuration = moment(duration).add(30, 'm').toDate();
         }
         
-        const X = newDuration.asHours();
-        const Y = hoursWorkedDaily * 230
+        const X = end - start;
+        const Y = X * 230
         const hourlyRate = (salary/260)/7.5
-        const Z = hourlyRate * hoursWorkedAnnual
-
-        if (hoursWorkedDaily >= 7.5) {
+        const Z = hourlyRate * Y
+console.log(end, start, Y, X, hourlyRate, Z, salary)
             return { X, Y, Z }
-        } else {
-            return 
-        }
+       
     }
 }
