@@ -8,9 +8,9 @@ const adminData = require('./admin-seeds');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  // await adminData();
+  await adminData();
   await entryData();
-  
+
   /*for (const entry of entryData) {
     await Entry.create({
       ...entry,
