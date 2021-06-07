@@ -47,7 +47,7 @@ Entry.init(
         created_at: { 
             type: DataTypes.DATEONLY, 
             allowNull: false, 
-            defaultValue: sequelize.fn('NOW') 
+            defaultValue: Sequelize.NOW
         }
     }, 
     { 
