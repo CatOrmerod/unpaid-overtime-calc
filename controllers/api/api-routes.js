@@ -24,27 +24,37 @@ router.post('/login', async (req, res) => {
 
 // Create new entries
 router.post('/entry', async (req, res) => {
-  const { industry, salary, start_time, created_at, created_at2, name, email } =
-    req.body;
+  const {
+    industry,
+    salary,
+    start_time,
+    end_time,
+    had_lunch,
+    name,
+    email,
+    created_at,
+  } = req.body;
 
-    console.log('DATA', {
-      industry,
-      salary,
-      start_time,
-      created_at,
-      created_at2,
-      name,
-      email,
-    })
+  console.log('DATA', {
+    industry,
+    salary,
+    start_time,
+    end_time,
+    had_lunch,
+    name,
+    email,
+    created_at,
+  });
 
   await Entry.create({
     industry,
     salary,
     start_time,
-    created_at,
-    created_at2,
+    end_time,
+    had_lunch,
     name,
     email,
+    created_at,
   });
 
   res.json({
