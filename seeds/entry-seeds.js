@@ -399,8 +399,7 @@ const entryData = [
         name: 'Matt Friedman',
         email: 'mattfriedman@gmail.com',
 
-    },
->>>>>>> 37089dbd5c2707f7e48da0d0234aad92a4a261f3
+    }
 ]; 
 
 const seedEntry =  () => Entry.bulkCreate(entryData); 
