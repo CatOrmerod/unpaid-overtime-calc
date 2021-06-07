@@ -1,10 +1,10 @@
-const overtimeCalc = require('./utils/calc')
+const express = require('express');
+const router = express.Router();
 
 router.get('/results/:email', async (req, res) => {
     try {
       // Find the logged in user based on the session ID
-      const entryData = await Entry.findByPk(req.params.email, {
-      });
+      const entryData = await Entry.findByPk(req.params.email, {});
   
       const entry = entryData.get({ plain: true });
       const X, Y, Z
@@ -17,3 +17,5 @@ router.get('/results/:email', async (req, res) => {
       res.status(500).json(err);
     }
 });
+
+module.exports = router;

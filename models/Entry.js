@@ -11,7 +11,7 @@ Entry.init(
             primaryKey: true, 
             autoIncrement: true
         },  
-        Industry: { 
+        industry: { 
             type: DataTypes.STRING, 
             allowNull: false
         }, 
@@ -26,7 +26,7 @@ Entry.init(
         created_at: { 
             type: DataTypes.DATEONLY, 
             allowNull: false, 
-            defaultValue: sequelize.fn('NOW') 
+            defaultValue: Sequelize.NOW
         },
         created_at2: { 
             type: Sequelize.DATE, 

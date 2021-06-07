@@ -16,7 +16,7 @@ Admin.init (
             allowNull: false, 
         }, 
         email: { 
-            type: DataTypes.EMAIL, 
+            type: DataTypes.STRING, 
             allowNull: false, 
             unique: true, 
             validate: { 
