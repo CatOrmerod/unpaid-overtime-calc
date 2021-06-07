@@ -11,7 +11,7 @@ const entryFormHandler = async (event) => {
     if (email && industry && start && end && lunch && salary) {
         const response = await fetch('/api/entry', {
             method: 'POST',
-            body: JSON.stringify({ mail, industry, start, end, lunch, salary }),
+            body: JSON.stringify({ email, industry, start, end, lunch, salary }),
             headers: { 'Content-Type': 'application/json' },
         });
 

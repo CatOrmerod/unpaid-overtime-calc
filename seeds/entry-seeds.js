@@ -9,7 +9,6 @@ const entryData = [
         has_lunch: true,
         name: 'Piers Sandoval',
         email: 'pierssandoval@gmail.com',
-
     },
     {
         industry: 'Construction',
@@ -400,7 +399,7 @@ const entryData = [
         name: 'Matt Friedman',
         email: 'mattfriedman@gmail.com',
 
-    },
+    }
 ]; 
 
 const seedEntry =  () => Entry.bulkCreate(entryData); 
