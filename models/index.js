@@ -1,16 +1,15 @@
-const Contributor = require('./Contributor');
+// Import models
 const Entry = require('./Entry');
 const Admin = require('./Admin');
-
-Contributor.hasOne(Entry, {
-    foreignKey: 'contributor_id',
+//  Entry belongs to Admin
+Entry.belongsTo(Admin, { 
+    foreignKey: 'admin_id',
+    onDelete: 'CASCADE',
+});
+// Admin can have multiple Entries
+Admin.hasMany(Entry, { 
+    foreignKey: 'admin_id',
     onDelete: 'CASCADE'
 });
-  
-Entry.belongsTo(Contributor, {
-    foreignKey: 'contributor_id'
-});
 
-// Admin.hasMany(Entry)
-  
-  module.exports = { Contributor, Admin, Entry };
+  module.exports = { Admin, Entry };

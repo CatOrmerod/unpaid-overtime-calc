@@ -44,6 +44,10 @@ Entry.init(
                 isEmail: true
             }
         },
+        admin_id: { 
+            type: DataTypes.INTEGER, 
+            references: { model: 'Admin', key: 'id' }
+          },
         created_at: { 
             type: DataTypes.DATEONLY, 
             allowNull: false, 
