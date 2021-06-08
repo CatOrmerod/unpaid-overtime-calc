@@ -24,7 +24,7 @@ Admin.init (
             }
         },
         password: { 
-            type: DataTypes. STRING, 
+            type: DataTypes.STRING, 
             allowNull: false, 
             field: 'password',
             validate: { 

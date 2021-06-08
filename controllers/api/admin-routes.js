@@ -6,7 +6,7 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   const user = await Admin.findOne({ where: { email } });
-
+console.log(user)
   if (!user) {
     return res.status(400).json({ msg: 'User does not exist' });
   }
@@ -25,5 +25,7 @@ router.post('/login', async (req, res) => {
     res.json({ id, name, email, message: 'You are now logged in!' });
   });
 });
+
+
 
 module.exports = router;

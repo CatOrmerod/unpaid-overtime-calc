@@ -3,28 +3,19 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Email</th>
-            <th scope="col">Hours overtime</th>
-            <th scope="col">$$ overtime</th>
+            <th scope="col">Industry</th>
+            <th scope="col">Lunch</th>
         </tr>
     </thead>
     <tbody>
+        {{#each users as | user |}}
         <tr>
-            <th scope="row">1</th>
-            <td>Sam@gmail.com</td>
-            <td>210</td>
-            <td>$10,000</td>
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.email}} </td>>
+            <td>{{user.industry}}</td>
+            <td>{{user.lunch}}</td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jane@test.com</td>
-            <td>350</td>
-            <td>$25,000</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry@gmail.com</td>
-            <td>30</td>
-            <td>$1,234</td>
-        </tr>
+
+        {{/each}}
     </tbody>
 </table>
