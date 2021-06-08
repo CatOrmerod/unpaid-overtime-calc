@@ -19,23 +19,30 @@ Entry.init(
             type: DataTypes. INTEGER,
             allowNull: false
         },
-        start_time: { 
+        start: { 
             type: DataTypes.DECIMAL(4,2), 
             allowNull: false, 
         },
-        end_time: {
+        end: {
             type: DataTypes.DECIMAL(4,2), 
             allowNull:false
         },
-        had_lunch: {
+        lunch: {
             type: DataTypes.BOOLEAN,
             allowNull: false, 
             defaultValue: false   
         },
+        unpaidHours: {
+            type: DataTypes.INTEGER,  
+            
+        },
+         unpaidSalary: {
+           type: DataTypes.INTEGER, 
+         
+        },
         email: { 
             type: DataTypes.STRING, 
             allowNull:false, 
-            unique: true, 
             validate: { 
                 isEmail: true
             }
