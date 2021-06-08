@@ -8,11 +8,15 @@ router.post('/login', async (req, res) => {
   const user = await Admin.findOne({ where: { email } });
 console.log(user)
   if (!user) {
-    return res.status(400).json({ msg: 'User does not exist' });
+    return res.status(400).json({ msg: 'Incorrect email or password, please try again'  });
   }
+  const validPassword = await user.checkPassword(password);
 
-  if (user.password !== password) {
-    return res.status(400).json({ msg: 'Invalid password' });
+  if (!validPassword) {
+    res
+      .status(400)
+      .json({ message: 'Incorrect email or password, please try again' });
+    return;
   }
 
   const { id, name } = user;
