@@ -1,19 +1,42 @@
-<div class="row">
-    <div class="col">
-        <h2 class="text-white text-center mb-5"><span>You worked {{X}} hours overtime</span> people worked <span>{{Y}}</span>
-            hours of
-            underpaid overtime, which cost them a total of <span>${{Z}}</span> </h2>
-    </div>
+<div class="row justify-content-md-center">
+  <div class="col">
+
+<h2 class="text-white text-center mb-5">{{unpaidHours}}</h2>
+{{#each users as | user |}}
+  {{#if @last}}
+  <h2 class="text-danger text-center mb-5">Hi {{user.email}}, <br>
+    You worked {{user.unpaidHours}} hours of unpaid overtime and were underpaid ${{user.unpaidSalary}}</p>
+  {{/if}}
+  {{/each}}
+  </div>
 </div>
 
-<div class="row justify-content-md-center">
-    <div class="col-md-8 col-sm-12">
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">X from Y Industry was underpaid $Z</li>
-            <li class="list-group-item">X from Y Industry was underpaid $Z</li>
-            <li class="list-group-item">X from Y Industry was underpaid $Z</li>
-            <li class="list-group-item">X from Y Industry was underpaid $Z</li>
-            <li class="list-group-item">X from Y Industry was underpaid $Z</li>
-        </ul>
-    </div>
+
+<h2 class="text-white text-center mb-5">{{unpaidHours}}</h2>
+{{#each users2 as | user |}}
+  {{#if}}
+  <h2 class="text-danger text-center mb-5">Hi {{user.email}}, <br>
+    You worked {{user.unpaidHours}} hours of unpaid overtime and were underpaid ${{user.unpaidSalary}}</p>
+  {{/if}}
+  {{/each}}
+  </div>
 </div>
+    {{!-- <h2 class="text-white text-center mb-5"><span>{{this.salary}}</span> people worked <span>{{this.email}}</span>
+      hours of
+      underpaid overtime, which cost them a total of <span>${{this.industry}}</span> </h2> --}}
+
+
+<div class="row justify-content-md-center">
+{{#each users as | user |}}
+<div class="card mb-3">
+  <div class="card-header">{{user.industry}}</div>
+  <div class="card-body">
+    <h5 class="card-title">Unpaid Salary: ${{user.unpaidSalary}}</h5>
+    <h5 class="card-title">Unpaid Hours: {{user.unpaidHours}}</h5>
+  </div>
+</div>
+ {{/each}}
+ </div>
+
+
+ 
