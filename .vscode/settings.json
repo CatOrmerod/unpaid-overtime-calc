@@ -1,0 +1,5 @@
+{
+    "omnisharp.enableRoslynAnalyzers": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useIgnoreFiles": false
+}
