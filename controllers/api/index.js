@@ -1,14 +1,15 @@
 const router = require('express').Router();
 
-const apiRoutes = require('./api-routes');
-const adminRoutes = require('./admin-routes');
-const entriesRoutes = require('./entries-routes');
+
+const adminRoute = require('./admin-routes');
+const entriesRoute = require('./entries-routes');
 
 
-router.use('/', apiRoutes);
-router.use('/admin', adminRoutes);
-router.use('/entry', entriesRoutes);
-router.use('/results', resultsRoute);
+
+
+router.use('/admin', adminRoute);
+router.use('/entry', entriesRoute);
+
 
 
 module.exports = router;

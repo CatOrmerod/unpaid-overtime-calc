@@ -9,9 +9,11 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
     "express-session": "^1.17.2",
+    "handlebars-helpers": "^0.10.0",
     "json2csv": "^5.0.6",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.1",
     "sequelize": "^6.6.2",
     "validator": "^13.6.0"
   },
