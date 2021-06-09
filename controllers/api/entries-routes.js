@@ -35,75 +35,42 @@ router.post('/', async (req, res) => {
   res.json({
     success: true,
   });
+
+      var mailOptions = {
+      from: '"Unpaid Overtime" <unpaidovertimecalculator@gmail.com>',
+      to: req.body.email,
+      subject: 'Thanks for using the unpaid overtime calculator',
+      text: `Hey ${req.body.email}, thanks for using our unpaid overtime calculator :)`,
+      html: `<b>Hey ${req.body.email}! </b><br><br>You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?<br><br> Sign our petition to end unpaid overtime.
+      <br>
+      <br>
+       Do you know anyone else who might like using this calculator? <br>Share them this link: <br><br> 
+      Thanks,<br>
+      <b>The unpaid overtime team</b>`
+    };
+
+    transport.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return console.log(error);
+      }
+      console.log('Message sent: %s', info.messageId);
+    });
+
 });
 
 
 
-
-
-// var transport = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true, // use SSL
-//   auth: {
-//     user: 'watts.e.michelle@gmail.com',
-//     pass:  process.env.pass,
-//   }
-// });
-
-
-// route to add a user
-// router.post('/', async (req, res) => {
-//   try {
-//     const userData = await Entry.create({
-//    industry,
-//     salary,
-//     start,
-//     end,
-//     lunch: lunch === "yeslunch",
-//     unpaidHours,
-//     unpaidSalary,
-//     email
-
-//     });
-
-//     console.log(userData)
-//    res.json({
-//     success: true,
-//   });
-
-//     var mailOptions = {
-//       from: '"Michelle Watts" <random@gmail.com>',
-//       to: req.body.email,
-//       subject: 'Nice Nodemailer test',
-//       text: 'Hey there, it’s our first message sent with Nodemailer ;) ',
-//       html: '<b>Hey there! </b><br> This is our first message sent with Nodemailer'
-//     };
-
-//     transport.sendMail(mailOptions, (error, info) => {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log('Message sent: %s', info.messageId);
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-
-
-// });
-
-
+var transport = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // use SSL
+  auth: {
+    user: 'unpaidovertimecalculator@gmail.com',
+    pass:  process.env.pass,
+  }
+});
 
 
 module.exports = router;
 
 
-//       email: req.body.email,
-//       industry: req.body.industry,
-//       start: req.body.start,
-//       end: req.body.end,
-//       lunch: req.body.lunch,
-//       salary: req.body.salary,
-//       unpaidHours: req.body.unpaidHours,
-//       unpaidSalary: req.body.unpaidSalary
