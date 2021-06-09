@@ -40,7 +40,7 @@ router.post('/entry', withAuth, async (req, res) => {
 });
 
 // Get total
-router.get('/get-entries-total', async (req, res) => {
+router.get('/_get-entries-total', async (req, res) => {
   const entries = await Entry.findAll();
 
   const total = entries.reduce((total, { start_time, end_time, salary }) => {
@@ -49,7 +49,25 @@ router.get('/get-entries-total', async (req, res) => {
     }
 
     const workedHours = end_time - start_time;
-    // if (0 > workedHours) console.log('THERE IS AN ERROR', end_time, start_time)
+    if (0 > workedHours) console.log('THERE IS AN ERROR', end_time, start_time)
+
+    return total + salary * workedHours;
+  }, 0);
+
+  res.json({ total });
+});
+
+router.get('/get-entries-total', async (req, res) => {
+  const entries = await Entry.findAll();
+
+  const total = entries.reduce((total, { start_time, end_time, salary }) => {
+    let workedHours = start_time > end_time
+      ? end_time - (start_time + 24)
+      : end_time - start_time;
+
+    if (0 > workedHours) {
+      workedHours = 24 - start_time + end_time;
+    }
 
     return total + salary * workedHours;
   }, 0);
@@ -73,7 +91,7 @@ router.get('/get-salary', async (req, res) => {
       end_time,
       salary,
     } = entry;
-
+    
     const offset = start_time > end_time ? 24 : 0;
 
     const workedHours = end_time - (start_time - offset);
