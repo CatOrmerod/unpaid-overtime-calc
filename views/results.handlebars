@@ -1,42 +1,75 @@
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center mb-5">
   <div class="col">
-
-<h2 class="text-white text-center mb-5">{{unpaidHours}}</h2>
-{{#each users as | user |}}
-  {{#if @last}}
-  <h2 class="text-danger text-center mb-5">Hi {{user.email}}, <br>
-    You worked {{user.unpaidHours}} hours of unpaid overtime and were underpaid ${{user.unpaidSalary}}</p>
-  {{/if}}
-  {{/each}}
+    <i class="fas fa-solid fa-user mb-3"></i>
+    {{#each users as | user |}}
+    {{#if @last}}
+    <h2 class="text-white text-center mb-3">
+      You worked <span class="text-danger">{{numberWithCommas user.unpaidHours}}</span> hours of unpaid overtime and
+      were underpaid <span class="text-danger">${{numberWithCommas user.unpaidSalary}}</span></p>
+      {{/if}}
+      {{/each}}
   </div>
 </div>
 
 
-<h2 class="text-white text-center mb-5">{{unpaidHours}}</h2>
-{{#each users2 as | user |}}
-  {{#if}}
-  <h2 class="text-danger text-center mb-5">Hi {{user.email}}, <br>
-    You worked {{user.unpaidHours}} hours of unpaid overtime and were underpaid ${{user.unpaidSalary}}</p>
-  {{/if}}
-  {{/each}}
+
+
+<div class="row justify-content-md-center mb-5">
+  <div class="col">
+    <i class="fas fa-solid fa-users mb-3"></i>
+    <h2 class="text-white text-center">
+      <span class="text-danger">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
+      worked a total of
+      {{#each users3 as | user |}}<span class="text-danger">{{numberWithCommas total_unpaid_hours}}</span>{{/each}}
+      unpaid hours, which
+      totalled <span class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary }}</span>
+      </p>{{/each}}
+
   </div>
 </div>
-    {{!-- <h2 class="text-white text-center mb-5"><span>{{this.salary}}</span> people worked <span>{{this.email}}</span>
-      hours of
-      underpaid overtime, which cost them a total of <span>${{this.industry}}</span> </h2> --}}
 
 
-<div class="row justify-content-md-center">
-{{#each users as | user |}}
-<div class="card mb-3">
-  <div class="card-header">{{user.industry}}</div>
-  <div class="card-body">
-    <h5 class="card-title">Unpaid Salary: ${{user.unpaidSalary}}</h5>
-    <h5 class="card-title">Unpaid Hours: {{user.unpaidHours}}</h5>
+
+{{!-- <div class="row justify-content-md-center mb-5">
+  <div class="col">
+  <i class="fas fa-solid fa-industry mb-3"></i>
+    <h2 class="text-white text-center">
+      {{#each users5 as | user |}}
+In the industry of <span class="text-danger">{{industry}}</span>
+{{/each}}
+
+  </div>
+</div> --}}
+
+
+<div class="row justify-content-md-center mb-5">
+  <div class="col">
+    <button type="submit" onclick="myFunction()" class="btn btn-danger">See by industry</button>
   </div>
 </div>
- {{/each}}
- </div>
+<div id="industry" class="row justify-content-md-center">
+  <div class="col">
+    {{#each users2 as | user |}}
+    <div class="card mb-3">
 
+      <h5 class="card-header">{{industry}}</h5>
+      <div class="card-body">
+        <h5 class="card-title">Unpaid Hours: {{numberWithCommas total_unpaid_hours}}</h5>
+        <h5 class="card-title">Unpaid Salary: ${{numberWithCommas total_unpaid_salary}}</h5>
+        
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
 
- 
+<script>
+  function myFunction() {
+    var x = document.getElementById("industry");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>

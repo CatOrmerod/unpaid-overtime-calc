@@ -47,6 +47,11 @@ Entry.init(
                 isEmail: true
             }
         },
+        created_at: { 
+            type: DataTypes.DATE, 
+            allowNull: false, 
+            defaultValue: Sequelize.NOW
+        }
     }, 
     { 
         sequelize, 

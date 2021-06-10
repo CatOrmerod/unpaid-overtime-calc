@@ -11,19 +11,7 @@ const seedDatabase = async () => {
   await adminData();
   await entryData();
 
-  /*for (const entry of entryData) {
-    await Entry.create({
-      ...entry,
-      user_id: contributors[Math.floor(Math.random() * contributors.length)].id,
-    });
-  }
-
-  for (const contributor of contributorData) {
-    await Contributor.create({
-      ...contributor,
-      user_id: contributors[Math.floor(Math.random() * contributors.length)].id,
-    });
-  }*/
+  
 
   process.exit(0);
 };

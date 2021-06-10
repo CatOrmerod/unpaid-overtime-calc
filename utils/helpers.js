@@ -9,4 +9,9 @@ module.exports = {
   total = unpaidHours.reduce(reducer);
     return total;
   },
+
+  numberWithCommas: function (x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 };
