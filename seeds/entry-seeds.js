@@ -124,7 +124,7 @@ const entryData = [
     {
         industry: 'Health',
         salary: 95000,
-        time: 8.5,
+        start: 8.5,
         end: 18,
         lunch: true,
         unpaidHours: 460,

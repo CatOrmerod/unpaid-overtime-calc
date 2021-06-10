@@ -1,3 +1,8 @@
+html{
+ scroll-behavior: smooth;
+}
+
+
 .red {
     color: rgb(186, 17, 17);
 }
@@ -6,3 +11,17 @@
     color: rgb(186, 17, 17);
     font-size: 40px;
 }
+
+.fa-solid {
+    color: rgb(140, 140, 140);
+    font-size: 40px;
+}
+
+
+#industry {
+    display: none;
+}
+
+ input[type='radio'] { 
+     transform: scale(1.25); 
+ }
