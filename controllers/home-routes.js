@@ -19,8 +19,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-
-
 router.get('/admin', withAuth, async (req, res) => {
     try {
         // Get all blog posts and JOIN with user data

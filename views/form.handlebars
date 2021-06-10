@@ -1,11 +1,9 @@
 <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mx-auto text-center p-5">
-  
-
-
     <i class="fas fa-solid fa-toggle-off"></i>
 
     <h1 class="text-white mb-5">You have the right to switch off.</h1>
-<h5 class="text-white mb-5">Based on these numbers we will calculate the amount of unpaid hours and salary for one year.</h5>
+    <p class="text-white mb-5">Based on these numbers we will calculate the amount of unpaid hours and salary you have
+        worked over one year.</p>
     <form class="entry-form" id="entry-form">
         <div class="row">
             <div class="col">
@@ -19,11 +17,11 @@
             <div class="col">
                 <label class="text-white mb-2">Industry: <span>*</span>&nbsp;</label>
                 <select id="industry-entry" class="form-select">
-                    <option value="Administration & professional services">Administration & professional services
+                    <option value="Administration & professional services">Administration &#38; professional services
                     </option>
                     <option value="Agriculture, forestry & fishing">Agriculture, forestry &amp;
                         fishing</option>
-                    <option value="Community & disability services">Community & disability services
+                    <option value="Community & disability services">Community &#38; disability services
                     </option>
                     <option value="Construction">Construction</option>
                     <option value="Education">Education</option>
@@ -38,12 +36,12 @@
                     <option value="Media & Communication">Media &amp; Communication</option>
                     <option value="Mining">Mining</option>
                     <option value="Manufacturing">Manufacturing</option>
-                    <option value="Property & other services">Property & other services</option>
-                    <option value="Public services & Emergency Services">Public services & Emergency
+                    <option value="Property & other services">Property &#38; other services</option>
+                    <option value="Public services & Emergency Services">Public services &#38; Emergency
                         Services</option>
                     <option value="Retail">Retail</option>
-                    <option value="Trades & trades assistants">Trades & trades assistants</option>
-                    <option value="Tra nsport">Transport</option>
+                    <option value="Trades & trades assistants">Trades &#38; trades assistants</option>
+                    <option value="Transport">Transport</option>
                     <option value="Utilities">Utilities</option>
                     <option value="Warehousing logistics">Warehousing &amp; logistics</option>
                     <option value="Something else. None of above fit what I do">Something else. None of
@@ -170,7 +168,6 @@
                 <label class="text-white mb-2">Annual salary: <span>*</span>&nbsp;</label>
                 <input type="text" placeholder="60000" class="form-control mb-3" name="salary" id="salary-gross"
                     required />
-
             </div>
         </div>
 
@@ -196,17 +193,16 @@
 
         <button type="submit" id="custom_submit" value="Submit" class="btn btn-danger">Submit</button>
 
+        {{#if logged_in}}
 
-      
+        {{else}}
+        <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
+        {{/if}}
+
+
     </form>
 
-    
-            {{#if logged_in}}
-            {{!-- <button class="btn btn-danger btn-sm" id="logout">Logout</button>
-            <a class="btn btn-info btn-sm" href="./csv">Download CSV</a> --}}
-            {{else}}
-            <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
-            {{/if}}
+
 
 
 
