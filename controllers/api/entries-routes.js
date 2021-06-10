@@ -4,7 +4,6 @@ const {
   Entry
 } = require('../../models');
 
-
 // Create new entries
 router.post('/', async (req, res) => {
   const {
@@ -58,8 +57,6 @@ router.post('/', async (req, res) => {
 
 });
 
-
-
 var transport = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
@@ -70,7 +67,4 @@ var transport = nodemailer.createTransport({
   }
 });
 
-
 module.exports = router;
-
-

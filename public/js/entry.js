@@ -49,22 +49,21 @@ const calculate = async () => {
             alert("Please enter full time hours");
         } else
 
-        if (lunch === "yeslunch") {
-            // var oneDay = (end - start) - 8
-            let unpaidHours = oneDay * 230
-            let hourlySalary = (salary / 260) / 7.5
-            let unpaidSalary = hourlySalary * unpaidHours
-            // return console.log("Late shift with lunch", "oneDay", oneDay, "unpaidHours", "unpaid HOurs", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary, "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
-            return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
-        } else {
-            var oneDayNew = oneDay + 0.5
-            let unpaidHours = oneDayNew * 230
-            let hourlySalary = (salary / 260) / 7.5
-            let unpaidSalary = hourlySalary * unpaidHours
-            // return console.log("Late shift with no lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
-            return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
-        }
-
+            if (lunch === "yeslunch") {
+                // var oneDay = (end - start) - 8
+                let unpaidHours = oneDay * 230
+                let hourlySalary = (salary / 260) / 7.5
+                let unpaidSalary = hourlySalary * unpaidHours
+                // return console.log("Late shift with lunch", "oneDay", oneDay, "unpaidHours", "unpaid HOurs", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary, "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
+                return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
+            } else {
+                var oneDayNew = oneDay + 0.5
+                let unpaidHours = oneDayNew * 230
+                let hourlySalary = (salary / 260) / 7.5
+                let unpaidSalary = hourlySalary * unpaidHours
+                // return console.log("Late shift with no lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
+                return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
+            }
 
     } else {
         var oneDay = (end - start) - 8
@@ -72,40 +71,27 @@ const calculate = async () => {
         if (oneDay < 0) {
             alert("Please enter full time hours");
         } else
-        if (lunch === "yeslunch") {
-            // var oneDay = (end - start) - 8
-            let unpaidHours = oneDay * 230
-            let hourlySalary = (salary / 260) / 7.5
-            let unpaidSalary = hourlySalary * unpaidHours
-            // return console.log("normal shift with lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
-            return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
-        } else {
-            var oneDayNew = oneDay + 0.5
-            let unpaidHours = oneDayNew * 230
-            let hourlySalary = (salary / 260) / 7.5
-            let unpaidSalary = hourlySalary * unpaidHours
-            // return console.log("normal shift with no lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
-            return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
-        }
-
+            if (lunch === "yeslunch") {
+                // var oneDay = (end - start) - 8
+                let unpaidHours = oneDay * 230
+                let hourlySalary = (salary / 260) / 7.5
+                let unpaidSalary = hourlySalary * unpaidHours
+                // return console.log("normal shift with lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
+                return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
+            } else {
+                var oneDayNew = oneDay + 0.5
+                let unpaidHours = oneDayNew * 230
+                let hourlySalary = (salary / 260) / 7.5
+                let unpaidSalary = hourlySalary * unpaidHours
+                // return console.log("normal shift with no lunch", "oneDay", oneDay, "unpaidHours", "unpaid Hours", unpaidHours.toFixed(0), "unpaid Salary", unpaidSalary.toFixed(0), "hourlySalary", hourlySalary.toFixed(0), "start", start, "end", end);
+                return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
+            }
         console.log(unpaidHours.toFixed(0), hourlySalary.toFixed(0), email, salary, industry, start, end)
     }
-
-
     console.log("oneDay", oneDay, "start", start, "end", end)
-
-
     // return entryFormHandler(parseInt(unpaidHours.toFixed(0)), parseInt(unpaidSalary.toFixed(0)));
-
-
-
-
-
     console.log(oneDay)
 }
-
-
-
 
 document
     .querySelector('#entry-form')

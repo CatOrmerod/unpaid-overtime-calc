@@ -48,9 +48,9 @@ router.get('/admin', withAuth, async (req, res) => {
     }
 });
 
-  router.get('/csv', async (req, res) => {
-        const file = await `./csv/calc-signups.csv`;
-        res.download(file); // Set disposition and send it.
-    });
+router.get('/csv', async (req, res) => {
+    const file = await `./csv/calc-signups.csv`;
+    res.download(file); // Set disposition and send it.
+});
 
 module.exports = router;
