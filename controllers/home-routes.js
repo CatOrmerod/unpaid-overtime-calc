@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const {
-    Entry,
-    Admin
+    Entry
 } = require('../models');
 const sequelize = require('../config/connection');
 const ObjectsToCsv = require('objects-to-csv');

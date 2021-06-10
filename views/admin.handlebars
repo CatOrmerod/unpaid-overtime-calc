@@ -1,21 +1,39 @@
-<table class="table text-white">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Email</th>
-            <th scope="col">Industry</th>
-            <th scope="col">Lunch</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each users as | user |}}
-        <tr>
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.email}} </td>>
-            <td>{{user.industry}}</td>
-            <td>{{user.lunch}}</td>
-        </tr>
+<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 mx-auto text-center p-5">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-right bg-dark mb-2">
+        <div class="container navbar-right">
+            {{#if logged_in}}
+            <button class="btn btn-danger btn-sm" id="logout">Logout</button>
+            <a class="btn btn-info btn-sm" href="./csv">Download CSV</a>
+            {{else}}
+            <a class="btn btn-light btn-sm" href="/login">Admin Login</a>
+            {{/if}}
 
-        {{/each}}
-    </tbody>
-</table>
+        </div>
+    </nav>
+
+
+    <i class="fas fa-solid fa-toggle-off"></i>
+
+    <h1 class="text-white mb-5">You have the right to switch off.</h1>
+
+    <table class="table text-white">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">Industry</th>
+                <th scope="col">Lunch</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users as | user |}}
+            <tr>
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.email}} </td>>
+                <td>{{user.industry}}</td>
+                <td>{{user.lunch}}</td>
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>

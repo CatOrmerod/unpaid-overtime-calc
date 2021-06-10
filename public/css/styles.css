@@ -17,6 +17,9 @@ html{
     font-size: 40px;
 }
 
+.fa-toggle-off {
+    color: rgb(186, 17, 17);
+}
 
 #industry {
     display: none;
