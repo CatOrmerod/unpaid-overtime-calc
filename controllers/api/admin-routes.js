@@ -6,7 +6,7 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   const user = await Admin.findOne({ where: { email } });
-console.log(user)
+  console.log(user)
   if (!user) {
     return res.status(400).json({ msg: 'Incorrect email or password, please try again'  });
   }
@@ -30,6 +30,15 @@ console.log(user)
   });
 });
 
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 
 module.exports = router;

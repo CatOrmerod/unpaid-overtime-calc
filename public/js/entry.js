@@ -1,5 +1,5 @@
 const entryFormHandler = async (unpaidHours, unpaidSalary) => {
-const email = document.querySelector('#email-entry').value.trim();
+    const email = document.querySelector('#email-entry').value.trim();
     const industry = document.querySelector('#industry-entry').value;
     const start = document.querySelector('#start-entry').value;
     const end = document.querySelector('#end-entry').value;
