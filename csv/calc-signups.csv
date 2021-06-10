@@ -1,42 +1,44 @@
 id,industry,salary,start,end,lunch,unpaidHours,unpaidSalary,email,created_at
-1,Education,70000,8.50,5.50,1,230,8846,pierssandoval@gmail.com,1623297496000
-2,Construction,100000,5.50,15.50,1,460,25274,mikecarroll@gmail.com,1623297496000
-3,"Entertainment, arts & recreation",60000,10.00,20.00,,460,15164,elmerroffe@gmail.com,1623297496000
-4,Media & Communication,80000,8.50,17.00,1,115,5054,rosemarycross@gmail.com,1623297496000
-5,"Finance, banking & insurance",130000,7.50,18.00,1,575,41071,chelseaslater@gmail.com,1623297496000
-6,Utilities,85000,6.50,15.50,1,230,10751,ferdinandcarter@gmail.com,1623297496000
-7,Community & disability services,50000,8.50,17.00,,230,6318,sadielowe@gmail.com,1623297496000
-8,"Agriculture, forestry & fishing",90000,6.50,15.50,1,115,5686,garrickmccoy@gmail.com,1623297496000
-9,Manufacturing,75000,8.00,16.50,1,115,4739,noellewatson@gmail.com,1623297496000
-10,Education,90000,8.50,17.00,1,115,5686,julietdaniels@gmail.com,1623297496000
-11,Health,60000,16.00,1.00,1,230,7582,ellenferon@gmail.com,1623297496000
-12,Health,95000,8.50,18.00,1,460,24010,edtitterington@gmail.com,1623297496000
-13,"Finance, banking & insurance",110000,7.00,17.00,1,460,27802,lizzieclark@gmail.com,1623297496000
-14,"Entertainment, arts & recreation",50000,12.00,20.00,,115,3159,danestokes@gmail.com,1623297496000
-15,Property & other services,130000,8.50,19.00,1,575,41071,edadawson@gmail.com,1623297496000
-16,Community & disability services,95000,7.50,16.50,1,,12005,gillianarnold@gmail.com,1623297496000
-17,"Finance, banking & insurance",170000,7.50,18.00,1,575,53708,eddiemcbride@gmail.com,1623297496000
-18,Transport,85000,4.50,13.00,1,230,10741,monafrench@gmail.com,1623297496000
-19,"Agriculture, forestry & fishing",70000,7.50,16.50,1,230,8846,beatricewright@gmail.com,1623297496000
-20,Administration & professional services,90000,8.50,17.00,1,115,5686,hannahgibbs@gmail.com,1623297496000
-21,Something else. None of above fit what I do,95000,7.50,16.50,1,230,12005,tracyadkins@gmail.com,1623297496000
-22,Public services & Emergency Services,100000,8.50,17.00,1,115,6318,benjaminskinner@gmail.com,1623297496000
-23,Warehousing logistics,65000,8.50,17.00,1,115,4107,taylorcastillo@gmail.com,1623297496000
-24,Media & Communication,80000,10.00,19.00,1,230,33488,neilhayward@gmail.com,1623297496000
-25,Retail,65000,8.50,17.50,1,230,8214,caldwellwalker@gmail.com,1623297496000
-26,Retail,60000,12.00,20.50,1,115,3791,ferncannon@gmail.com,1623297496000
-27,Education,60000,7.50,17.50,1,460,15164,georgealvarez@gmail.com,1623297496000
-28,"Entertainment, arts & recreation",50000,9.50,17.50,1,0,0,elleryarnold@gmail.com,1623297496000
-29,Mining,130000,5.50,17.00,1,805,57500,groverwalton@gmail.com,1623297496000
-30,"Finance, banking & insurance",70000,8.50,17.50,1,230,8846,angelicavasquez@gmail.com,1623297496000
-31,"Entertainment, arts & recreation",58000,9.50,18.50,1,230,7329,austinread@gmail.com,1623297496000
-32,Community & disability service,50000,8.50,15.50,1,230,6318,cherylrose@gmail.com,1623297496000
-33,"Entertainment, arts & recreation",82000,8.50,17.00,,230,10362,andreabyrd@gmail.com,1623297496000
-34,Manufacturing,45000,8.50,17.00,,230,5686,pamelacox@gmail.com,1623297496000
-35,Transport,92000,4.00,2.00,,575,29065,kelseymarsh@gmail.com,1623297496000
-36,Education,72000,7.50,16.00,1,115,4549,alicestevens@gmail.com,1623297496000
-37,Trades & trades assistants,980000,4.50,14.50,1,460,24769,ferrismadron@gmail.com,1623297496000
-38,Something else. None of above fit what I do,150000,8.50,17.50,1,230,18956,ritasilva@gmail.com,1623297496000
-39,Administration & professional services,110000,7.50,17.00,1,575,34752,tomhurlbutt@gmail.com,1623297496000
-40,Health,70000,8.50,17.00,1,115,4423,mattfriedman@gmail.com,1623297496000
-41,"Finance, banking & insurance",70000,9.00,17.50,1,115,4128,watts.e.michelle@gmail.com,1623297573000
+1,Education,70000,8.50,5.50,1,230,8846,pierssandoval@gmail.com,1623318382000
+2,Construction,100000,5.50,15.50,1,460,25274,mikecarroll@gmail.com,1623318382000
+3,"Entertainment, arts & recreation",60000,10.00,20.00,,460,15164,elmerroffe@gmail.com,1623318382000
+4,Media & Communication,80000,8.50,17.00,1,115,5054,rosemarycross@gmail.com,1623318382000
+5,"Finance, banking & insurance",130000,7.50,18.00,1,575,41071,chelseaslater@gmail.com,1623318382000
+6,Utilities,85000,6.50,15.50,1,230,10751,ferdinandcarter@gmail.com,1623318382000
+7,Community & disability services,50000,8.50,17.00,,230,6318,sadielowe@gmail.com,1623318382000
+8,"Agriculture, forestry & fishing",90000,6.50,15.50,1,115,5686,garrickmccoy@gmail.com,1623318382000
+9,Manufacturing,75000,8.00,16.50,1,115,4739,noellewatson@gmail.com,1623318382000
+10,Education,90000,8.50,17.00,1,115,5686,julietdaniels@gmail.com,1623318382000
+11,Health,60000,16.00,1.00,1,230,7582,ellenferon@gmail.com,1623318382000
+12,Health,95000,8.50,18.00,1,460,24010,edtitterington@gmail.com,1623318382000
+13,"Finance, banking & insurance",110000,7.00,17.00,1,460,27802,lizzieclark@gmail.com,1623318382000
+14,"Entertainment, arts & recreation",50000,12.00,20.00,,115,3159,danestokes@gmail.com,1623318382000
+15,Property & other services,130000,8.50,19.00,1,575,41071,edadawson@gmail.com,1623318382000
+16,Community & disability services,95000,7.50,16.50,1,,12005,gillianarnold@gmail.com,1623318382000
+17,"Finance, banking & insurance",170000,7.50,18.00,1,575,53708,eddiemcbride@gmail.com,1623318382000
+18,Transport,85000,4.50,13.00,1,230,10741,monafrench@gmail.com,1623318382000
+19,"Agriculture, forestry & fishing",70000,7.50,16.50,1,230,8846,beatricewright@gmail.com,1623318382000
+20,Administration & professional services,90000,8.50,17.00,1,115,5686,hannahgibbs@gmail.com,1623318382000
+21,Something else. None of above fit what I do,95000,7.50,16.50,1,230,12005,tracyadkins@gmail.com,1623318382000
+22,Public services & Emergency Services,100000,8.50,17.00,1,115,6318,benjaminskinner@gmail.com,1623318382000
+23,Warehousing logistics,65000,8.50,17.00,1,115,4107,taylorcastillo@gmail.com,1623318382000
+24,Media & Communication,80000,10.00,19.00,1,230,33488,neilhayward@gmail.com,1623318382000
+25,Retail,65000,8.50,17.50,1,230,8214,caldwellwalker@gmail.com,1623318382000
+26,Retail,60000,12.00,20.50,1,115,3791,ferncannon@gmail.com,1623318382000
+27,Education,60000,7.50,17.50,1,460,15164,georgealvarez@gmail.com,1623318382000
+28,"Entertainment, arts & recreation",50000,9.50,17.50,1,0,0,elleryarnold@gmail.com,1623318382000
+29,Mining,130000,5.50,17.00,1,805,57500,groverwalton@gmail.com,1623318382000
+30,"Finance, banking & insurance",70000,8.50,17.50,1,230,8846,angelicavasquez@gmail.com,1623318382000
+31,"Entertainment, arts & recreation",58000,9.50,18.50,1,230,7329,austinread@gmail.com,1623318382000
+32,Community & disability service,50000,8.50,15.50,1,230,6318,cherylrose@gmail.com,1623318382000
+33,"Entertainment, arts & recreation",82000,8.50,17.00,,230,10362,andreabyrd@gmail.com,1623318382000
+34,Manufacturing,45000,8.50,17.00,,230,5686,pamelacox@gmail.com,1623318382000
+35,Transport,92000,4.00,2.00,,575,29065,kelseymarsh@gmail.com,1623318382000
+36,Education,72000,7.50,16.00,1,115,4549,alicestevens@gmail.com,1623318382000
+37,Trades & trades assistants,980000,4.50,14.50,1,460,24769,ferrismadron@gmail.com,1623318382000
+38,Something else. None of above fit what I do,150000,8.50,17.50,1,230,18956,ritasilva@gmail.com,1623318382000
+39,Administration & professional services,110000,7.50,17.00,1,575,34752,tomhurlbutt@gmail.com,1623318382000
+40,Health,70000,8.50,17.00,1,115,4423,mattfriedman@gmail.com,1623318382000
+41,Administration & professional services,75000,23.00,7.00,1,0,0,watts.e.michelle@gmail.com,1623320235000
+42,Administration & professional services,75000,22.00,6.50,1,115,4423,watts.e.michelle@gmail.com,1623320883000
+43,Administration & professional services,75000,11.00,9.00,,3335,128269,watts.e.michelle@gmail.com,1623321076000

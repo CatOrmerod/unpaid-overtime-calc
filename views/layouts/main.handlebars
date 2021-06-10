@@ -19,23 +19,7 @@
     <section class="min-vh-100 bg-dark">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 mx-auto text-center p-5">
-                    <nav class="navbar navbar-expand-lg navbar-light navbar-right bg-dark mb-2">
-                        <div class="container navbar-right">
-                            {{#if logged_in}}
-                            <button class="btn btn-danger btn-sm" id="logout">Logout</button>
-                            <a class="btn btn-warning btn-sm" href="./csv">Download CSV</a>
-                            {{else}}
-                            <a class="btn btn-light btn-sm" href="/login">Admin Login</a>
-                            {{/if}}
-                            
-                        </div>
-                    </nav>
-
-
-                    <i class="fas fa-hourglass-half mb-2"></i>
-
-                    <h1 class="text-white mb-5">You have the right to switch off.</h1>
+                
 
                     {{{body}}}
 
