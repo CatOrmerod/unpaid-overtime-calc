@@ -342,7 +342,7 @@ const entryData = [
 
     },
     {
-        industry: 'Community & disability service',
+        industry: 'Community & disability services',
         salary: 50000,
         start: 8.5,
         end: 15.5,

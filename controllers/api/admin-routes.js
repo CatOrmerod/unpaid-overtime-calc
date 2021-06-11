@@ -1,32 +1,54 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { Admin, Entry } = require('../../models');
+const {
+  Admin,
+  Entry
+} = require('../../models');
 
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const {
+    email,
+    password
+  } = req.body;
 
-  const user = await Admin.findOne({ where: { email } });
+  const user = await Admin.findOne({
+    where: {
+      email
+    }
+  });
   console.log(user)
   if (!user) {
-    return res.status(400).json({ msg: 'Incorrect email or password, please try again'  });
+    return res.status(400).json({
+      msg: 'Incorrect email or password, please try again'
+    });
   }
   const validPassword = await user.checkPassword(password);
 
   if (!validPassword) {
     res
       .status(400)
-      .json({ message: 'Incorrect email or password, please try again' });
+      .json({
+        message: 'Incorrect email or password, please try again'
+      });
     return;
   }
 
-  const { id, name } = user;
+  const {
+    id,
+    name
+  } = user;
 
   req.session.save(() => {
     req.session.user_id = id;
     req.session.username = email;
     req.session.logged_in = true;
 
-    res.json({ id, name, email, message: 'You are now logged in!' });
+    res.json({
+      id,
+      name,
+      email,
+      message: 'You are now logged in!'
+    });
   });
 });
 

@@ -3,13 +3,13 @@ const {
   Entry
 } = require('../models');
 const sequelize = require('../config/connection');
-
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   const userSumIndustry = await Entry.findAll({
     attributes: ['industry', [sequelize.fn('sum', sequelize.col('unpaid_hours')), 'total_unpaid_hours'],
-      [sequelize.fn('sum', sequelize.col('unpaid_salary')), 'total_unpaid_salary']
+      [sequelize.fn('sum', sequelize.col('unpaid_salary')), 'total_unpaid_salary'],
+       [sequelize.fn('count', sequelize.col('*')), 'total_submissions']
 
     ],
     group: ['industry'],
@@ -58,9 +58,9 @@ router.get('/', async (req, res) => {
 
   const totalNumber = userData.length;
 
-  const totalNumber2 = totals.length;
+  
 
-  console.log("total", totalNumber2)
+  console.log("users2", users2, "total" , totalNumber)
   res.render('results', {
     users,
     users2,
@@ -68,7 +68,6 @@ router.get('/', async (req, res) => {
     users4,
     userSumAll,
     totalNumber,
-    totalNumber2,
     users5,
     latestEntry,
     totals
