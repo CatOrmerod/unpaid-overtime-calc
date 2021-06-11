@@ -25,6 +25,10 @@ html{
     display: none;
 }
 
+.footer{
+    font-size: 10px;
+}
+
  input[type='radio'] { 
      transform: scale(1.25); 
  }
