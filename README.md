@@ -49,6 +49,6 @@ or reach out to one of the team members
 | Name | Email | Github |
 |---|---|---|
 | Jason Bolton  | [Email Jason](mailto:jasonbolton89@gmail.com) | [Jason Bolton Repo](https://github.com/Jbolton89) |
-| Jose Gaspal  | [Email Jose](mailto:josephgaspar725@gmail.com) | [Jose Gaspal Repo](https://github.com/Jose109-001) |
+| Jose Gaspar  | [Email Jose](mailto:josephgaspar725@gmail.com) | [Jose Gaspar Repo](https://github.com/Jose109-001) |
 | Cat Ormerod | [Email Cat](mailto:catormerod@gmail.com) | [Cat Ormerod Repo](https://github.com/CatOrmerod) |
 | Michelle Watts  | [Email Michelle](mailto:watts.e.michelle@gmail.com) | [Michelle Watts Repo](https://github.com/michellewatts20000) |
