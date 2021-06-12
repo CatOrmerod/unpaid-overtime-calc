@@ -12,7 +12,7 @@ This tool would mainly be used as a survery tool to register trends across diffe
  # Table of Contents
  
  * [Installation](#installation)
- * [Useage](#useage)
+ * [Usage](#usage)
  * [Contributing](#contributing)
  * [Tests](#tests)
  * [License](#license)
@@ -22,7 +22,7 @@ This tool would mainly be used as a survery tool to register trends across diffe
 # Installation 
 
 
- # Useage
+ # Usage
 
 Entry user will represent the survey participant, who will enter details regarding hours worked, employment department, email, id, and whether they took a lunch break. Once the calculate button is clicked, it will display the total overtime hours worked for the year, in addition to a comparison to others within the same department as reference point. This information is then stored within our database to further enhance the quality by increasing sample size. 
 
@@ -44,4 +44,11 @@ Admin user has access to a login page with admin rights.
   
 # Questions
 Please visit our GitHub at [Unpaid Overtime](https://https://github.com/CatOrmerod/unpaid-overtime-calc)
-or contact us at -
+or reach out to one of the team members
+
+| Name | Email | Github |
+|---|---|---|
+| Jason Bolton  | [Email Jason](mailto:jasonbolton89@gmail.com) | [Jason Bolton Repo](https://github.com/Jbolton89) |
+| Jose Gaspar  | [Email Jose](mailto:josephgaspar725@gmail.com) | [Jose Gaspar Repo](https://github.com/Jose109-001) |
+| Cat Ormerod | [Email Cat](mailto:catormerod@gmail.com) | [Cat Ormerod Repo](https://github.com/CatOrmerod) |
+| Michelle Watts  | [Email Michelle](mailto:watts.e.michelle@gmail.com) | [Michelle Watts Repo](https://github.com/michellewatts20000) |
