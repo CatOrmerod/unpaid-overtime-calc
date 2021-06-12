@@ -25,7 +25,8 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
         });
 
         if (response.ok) {
-            document.location.replace(`/results`);
+            const responseBody = await response.json() 
+            document.location.href=`/results/${responseBody.entryResult.id}`;
         } else {
             alert(response.statusText);
         }

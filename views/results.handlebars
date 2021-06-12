@@ -6,13 +6,9 @@
   <div class="row justify-content-md-center mb-5">
     <div class="col">
       <i class="fas fa-solid fa-user mb-3"></i>
-      {{#each users as | user |}}
-      {{#if @last}}
       <h3 class="text-white text-center mb-3">
-        You worked <span class="text-danger">{{numberWithCommas user.unpaidHours}}</span> hours of unpaid overtime and
-        were underpaid <span class="text-danger">${{numberWithCommas user.unpaidSalary}}</span></h3>
-      {{/if}}
-      {{/each}}
+        You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid overtime and
+        were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
     </div>
   </div>
 
