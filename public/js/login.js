@@ -17,7 +17,8 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the admin page
       document.location.replace('/admin');
     } else {
-      alert(response.statusText);
+      const responseBody = await response.json() 
+      alert(responseBody.message);
     }
   }
 };
