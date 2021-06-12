@@ -5,7 +5,7 @@ const {
 const sequelize = require('../config/connection');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const userSumIndustry = await Entry.findAll({
     attributes: ['industry', [sequelize.fn('sum', sequelize.col('unpaid_hours')), 'total_unpaid_hours'],
       [sequelize.fn('sum', sequelize.col('unpaid_salary')), 'total_unpaid_salary'],
@@ -16,11 +16,10 @@ router.get('/', async (req, res) => {
     order: sequelize.literal('total_unpaid_hours DESC')
   })
 
-  const latestEntry = await Entry.findAll({
-    limit: 1,
-    order: [
-      ['created_at', 'DESC']
-    ]
+  const latestEntry = await Entry.findOne({
+    where: {
+      id: req.params.id,
+    }
   });
 
   const userSumAll = await Entry.findAll({
@@ -50,17 +49,20 @@ router.get('/', async (req, res) => {
   const users4 = userSumAll$.map((user) => user.get({
     plain: true
   }));
-  const users5 = latestEntry.map((user) => user.get({
-    plain: true
-  }));
+  const latestUser = latestEntry.get({
+    plain:true
+  });
+  // const users5 = latestEntry.map((user) => user.get({
+  //   plain: true
+  // }));
 
-  const totals = users2.find(u => u.industry === users5[0].industry)
+  const totals = users2.find(u => u.industry === latestUser.industry)
 
   const totalNumber = userData.length;
 
   
 
-  console.log("users2", users2, "total" , totalNumber)
+  console.log("users2", users2, "total" , totalNumber, latestUser)
   res.render('results', {
     users,
     users2,
@@ -68,8 +70,8 @@ router.get('/', async (req, res) => {
     users4,
     userSumAll,
     totalNumber,
-    users5,
-    latestEntry,
+    // users5,
+    latestUser,
     totals
   });
 });

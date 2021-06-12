@@ -20,8 +20,7 @@ router.post('/', async (req, res) => {
   } = req.body;
   console.log(req.body);
 
-
-  await Entry.create({
+  const entryResult = await Entry.create({ 
     industry,
     salary,
     start,
@@ -34,6 +33,7 @@ router.post('/', async (req, res) => {
 
   res.json({
     success: true,
+    entryResult,
   });
 
       var mailOptions = {
