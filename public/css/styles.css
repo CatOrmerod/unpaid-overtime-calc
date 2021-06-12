@@ -32,3 +32,21 @@ html{
  input[type='radio'] { 
      transform: scale(1.25); 
  }
+
+   #table2 {
+    display:none;
+  }
+
+
+
+@media screen and (max-width: 767px) {
+  #table {
+    display:none;
+  }
+
+   #table2 {
+    display:block;
+  }
+
+
+}
