@@ -16,7 +16,7 @@
 
     <h1 class="text-white mb-5">You have the right to switch off.</h1>
 
-    <table class="table text-white">
+    <table id="table" class="table text-white">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -35,6 +35,27 @@
                 <td>{{user.industry}}</td>
                 <td>{{user.lunch}}</td>
                 <td>{{user.unpaidHours}}</td>
+                <td>{{user.unpaidSalary}}</td>
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+
+
+    <table id="table2" class="table text-white">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Industry</th>
+                <th scope="col">Unpaid Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users as | user |}}
+            <tr>
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.industry}}</td>
                 <td>{{user.unpaidSalary}}</td>
             </tr>
 
