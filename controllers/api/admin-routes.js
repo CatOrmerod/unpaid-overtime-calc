@@ -1,42 +1,31 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const {
-  Admin,
-  Entry
-} = require('../../models');
+const { Admin, Entry } = require('../../models');
 
 router.post('/login', async (req, res) => {
-  const {
-    email,
-    password
-  } = req.body;
+  const { email, password } = req.body;
 
   const user = await Admin.findOne({
     where: {
-      email
-    }
+      email,
+    },
   });
-  console.log(user)
+  console.log(user);
   if (!user) {
     return res.status(400).json({
-      msg: 'Incorrect email or password, please try again'
+      msg: 'Incorrect email or password, please try again',
     });
   }
   const validPassword = await user.checkPassword(password);
 
   if (!validPassword) {
-    res
-      .status(400)
-      .json({
-        message: 'Incorrect email or password, please try again'
-      });
+    res.status(400).json({
+      message: 'Incorrect email or password, please try again',
+    });
     return;
   }
 
-  const {
-    id,
-    name
-  } = user;
+  const { id, name } = user;
 
   req.session.save(() => {
     req.session.user_id = id;
@@ -47,7 +36,7 @@ router.post('/login', async (req, res) => {
       id,
       name,
       email,
-      message: 'You are now logged in!'
+      message: 'You are now logged in!',
     });
   });
 });
@@ -61,6 +50,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
 
 module.exports = router;
