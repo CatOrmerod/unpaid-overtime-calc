@@ -2,15 +2,13 @@
     <nav class="navbar navbar-expand-lg navbar-light navbar-right bg-dark mb-2">
         <div class="container navbar-right">
             {{#if logged_in}}
-            <button class="btn btn-danger btn-sm" id="logout">Logout</button>
-            <a class="btn btn-info btn-sm" href="./csv">Download CSV</a>
+                <button class="btn btn-danger btn-sm" id="logout">Logout</button>
+                <a class="btn btn-info btn-sm" href="./csv">Download CSV</a>
             {{else}}
-            <a class="btn btn-light btn-sm" href="/login">Admin Login</a>
+                <a class="btn btn-light btn-sm" href="/login">Admin Login</a>
             {{/if}}
-
         </div>
     </nav>
-
 
     <i class="fas fa-solid fa-toggle-off"></i>
 

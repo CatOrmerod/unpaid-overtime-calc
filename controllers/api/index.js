@@ -5,6 +5,4 @@ const entriesRoute = require('./entries-routes');
 router.use('/admin', adminRoute);
 router.use('/entry', entriesRoute);
 
-
-
 module.exports = router;

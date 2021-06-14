@@ -1,7 +1,6 @@
 const sequelize = require('../config/connection');
 const { Entry, Admin } = require('../models');
 
-// const contributorData = require('./contributorData.json');
 const entryData = require('./entry-seeds');
 const adminData = require('./admin-seeds');
 
@@ -10,8 +9,6 @@ const seedDatabase = async () => {
 
   await adminData();
   await entryData();
-
-  
 
   process.exit(0);
 };
