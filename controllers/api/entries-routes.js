@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
     html: `<b>Hey ${req.body.email}! </b><br><br>You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?<br><br> Sign our petition to end unpaid overtime.
       <br>
       <br>
-       Do you know anyone else who might like using this calculator? <br>Share them this link: <br><br> 
+       Do you know anyone else who might like using this calculator? <br>Share them this link: <a href="https://the-right-to-switch-off.herokuapp.com/">https://the-right-to-switch-off.herokuapp.com/</a><br><br> 
       Thanks,<br>
       <b>The unpaid overtime team</b>`,
   };
