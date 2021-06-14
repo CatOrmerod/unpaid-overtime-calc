@@ -59,7 +59,7 @@ var transport = nodemailer.createTransport({
   secure: true, // use SSL
   auth: {
     user: 'unpaidovertimecalculator@gmail.com',
-    pass: process.env.pass,
+    pass: process.env.PASS,
   },
 });
 

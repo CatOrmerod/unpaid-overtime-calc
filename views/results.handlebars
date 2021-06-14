@@ -7,7 +7,8 @@
     <div class="col">
       <i class="fas fa-solid fa-user mb-3"></i>
       <h3 class="text-white text-center mb-3">
-        You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid overtime and
+        You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid overtime
+        and
         were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
     </div>
   </div>
@@ -34,13 +35,13 @@
         worked a total of
         {{#each users3 as | user |}}<span class="text-danger">{{numberWithCommas total_unpaid_hours}}</span>{{/each}}
         unpaid hours, which
-        totalled <span
-          class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary }}</span>
+        totalled <span class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
+          }}</span>
       </h3>{{/each}}
     </div>
   </div>
 
-  
+
 
   <div class="row justify-content-md-center mb-5">
     <div class="col">
@@ -53,7 +54,7 @@
       <div class="card mb-3">
         <h5 class="card-header">{{industry}}</h5>
         <div class="card-body">
-           <p class="card-title">Submissions: {{numberWithCommas total_submissions}}</p>
+          <p class="card-title">Submissions: {{numberWithCommas total_submissions}}</p>
           <p class="card-title">Unpaid Hours: {{numberWithCommas total_unpaid_hours}}</p>
           <p class="card-title">Unpaid Salary: ${{numberWithCommas total_unpaid_salary}}</p>
 
@@ -64,7 +65,7 @@
   </div>
 
   {{#if logged_in}}
- 
+
   {{else}}
   <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
   {{/if}}
