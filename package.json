@@ -32,7 +32,7 @@
     "start": "node server.js",
     "develop": "nodemon server.js",
     "lint": "npx eslint **/*.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
